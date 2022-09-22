@@ -1,0 +1,142 @@
+
+
+<div class="col d-flex flex-column h-sm-100 bg-light bloquecuerpo">
+  <div class="minusMargin px-4 boxt-cont borderRadius w-95mb container">
+    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade mb-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/img/banner.jpg" class="borderRadius d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/img/banner-2.jpg" class="borderRadius d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/img/banner.jpg" class="borderRadius d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-9 pe-md-5">
+        <div class="row p-2 shadow m-0 mb-4 borderRadius border">
+          <div class="col-6">
+            <a href="/" class="p-3 mb-2 m-md-0 borderRadius w-100 text-center colorw" type="button" data-bs-toggle="modal" data-bs-target="#modalPost">
+              <i class="mdi mdi-message-settings-outline iconmens"></i>
+              Nueva Publicacion
+            </a>
+          </div>
+          <div class="col-6">
+           <a href="/" class="p-3  mb-2 m-md-0 borderRadius w-100 text-center colorw" type="button" data-bs-toggle="modal" data-bs-target="#modalRecognition">
+            <i class="mdi mdi-medal-outline iconmedals"></i>
+            Nueva Reconocimiento
+          </a>
+        </div>
+      </div>
+      <div class="row justify-content-md-center p-2 shadow m-0 mb-4 borderRadius border">
+        <div class="col">
+          <div class="w-100 text-center">
+            <a href="#" class="colorw w-100 p-2 rounded-pill d-block"> Todo </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class=" w-100 text-center">
+            <a href="#" class="colorw w-100 p-2 rounded-pill d-block">Publicaciones</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="w-100 text-center">
+            <a href="#" class="colorw w-100 p-2 rounded-pill d-block">Reconocimientos</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="w-100 text-center">
+            <a href="#" class="colorw w-100 p-2 rounded-pill d-block">Aniversarios</a>
+          </div>
+        </div>
+      </div>
+      <div class="shadow py-3 mb-4 borderRadius w-100 border" *ngFor="let post of posts">
+        <div class="ps-3 pe-1">
+          <div class="d-flex bd-highlight  mb-3">
+            <a href="#" class="bd-highlight link-dark text-decoration-none">
+              <img src="https://github.com/mdo.png" alt="mdo" width="40" height="40" class="rounded-circle">
+            </a>
+            <div class="bd-highlight">
+              <a href="#" class="ps-2 link-dark text-decoration-none">
+                <span class="t-resalt">{{ post.author.first_name}}.</span>
+              </a>
+              <span class="ps-1 py-0" *ngIf="post.area">Publico en</span>
+              <a href="/" class="ps-1 t-color" *ngIf="post.area">Bienestar</a>
+              <small class="d-block ps-2 pminus">{{ post.created }}</small>
+            </div>
+            <div class="ms-auto bd-highlight">
+              <a href="/">
+                <i class="mdi mdi-dots-vertical"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="lineDv my-3"></div>
+        <p class="text-justify lh-1 p-1 px-3">
+          {{ post.message }}
+        </p>
+        <div class="px-3">
+          <div class="ratio ratio-16x9" *ngIf="post.video">
+            <iframe src="https://www.youtube.com/embed/gT946e-hZoY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+      <!-- <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade mb-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/img/banner.jpg" class="borderRadius d-block w-100" alt="...">
+          </div>
+        </div>
+      </div> -->
+      <div class="shadow py-3 mb-4 borderRadius w-100 border">
+        <div class="ps-3 pe-1">
+          <div class="d-flex bd-highlight  mb-3">
+            <a href="#" class="bd-highlight link-dark text-decoration-none">
+              <img src="https://github.com/mdo.png" alt="mdo" width="40" height="40" class="rounded-circle">
+            </a>
+            <div class="bd-highlight">
+              <a href="#" class="ps-2 link-dark text-decoration-none">
+                <span class="t-resalt">Daniel Fontana C.</span> 
+              </a>
+              <span class="ps-1 py-0">Publico en</span>
+              <a href="/" class="ps-1 t-color">Bienestar</a>
+              <small class="d-block ps-2 pminus">13/07/2022</small>
+            </div>
+            <div class="ms-auto bd-highlight">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </div>
+        </div>
+        <div class="lineDv my-3"></div>
+        <p class="text-justify lh-1 p-1 px-3">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+        <div class="px-3">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 px-2">
+      <div class="cardW shadow-sm mb-4 bg-light borderRadius w-100">
+        <img src="assets/img/ejemplo1.jpg" class="borderRadius w-100">
+      </div>
+      <div class="cardW shadow-sm my-4 bg-light borderRadius w-100">
+        <img src="assets/img/ejemplo2.jpg" class="borderRadius w-100">
+      </div>
+      <div class="cardW shadow-sm my-4 bg-light borderRadius w-100">
+        <img src="assets/img/ejemplo3.jpg" class="borderRadius w-100">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<app-recognition></app-recognition>
+<app-post></app-post>
+
+<app-message></app-message>

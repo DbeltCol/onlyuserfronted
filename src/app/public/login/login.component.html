@@ -1,0 +1,95 @@
+<section class="box-login m-0 p-0">
+  <div class="container-fluid m-0 p-0">
+    <div class="row p-0">
+      <div class="col-md-4 m-0 p-0 d-none d-md-block">
+        <div class="box-img-login p-0 m-0">
+          <img
+            src="assets/img/people-collage-design-back.jpg"
+            class="w-100 p-0"
+          />
+          <div class="pantalla"></div>
+        </div>
+      </div>
+      <div class="col-md-8 d-flex align-items-center">
+        <div class="text-black w-75 mx-auto">
+          <form
+            [formGroup]="form"
+            class="align-items-start my-5 py-5 m-md-0 user"
+            style="border: 1px solid #fff"
+            autocomplete="off"
+            (submit)="saveData($event)"
+          >
+            <div class="d-flex align-items-center mb-3 pb-1">
+              <img src="assets/img/logo.png" class="img-fluid" />
+            </div>
+            <h5 class="fw-normal my-3 pb-3" style="letter-spacing: 1px">
+              Bienvenido,<br />
+              Inicie sesión en su cuenta.
+            </h5>
+
+            <hr />
+            <div class="row">
+              <div class="col-md-6 my-3">
+                <div class="form-group">
+                  <label for="exampleEmail" class="">Correo electrónico</label>
+                  <input
+                    name="email"
+                    id="exampleEmail"
+                    placeholder="Correo electrónico aquí..."
+                    type="email"
+                    class="form-control form-control-user"
+                    (keyup)="clearError()"
+                    formControlName="email"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6 my-3">
+                <div class="form-group">
+                  <label for="examplePassword" class="">Clave</label>
+                  <input
+                    type="password"
+                    class="form-control form-control-user"
+                    placeholder="Contraseña aquí..."
+                    type="password"
+                    (keyup)="clearError()"
+                    formControlName="password"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-check">
+              <input
+                name="check"
+                id="exampleCheck"
+                type="checkbox"
+                class="form-check-input"
+               
+              />
+              <label for="exampleCheck" class="form-check-label"
+                >Mantenme conectado</label
+              >
+            </div>
+            <hr />
+            <div class="text-end">
+              <div class="ml-auto">
+                <a href="#" class="btn-sm btn btn-link">
+                  Recuperar contraseña</a
+                >
+                <!--<button class="btn btn-primary btn-sm">Iniciar sesión</button>-->
+                <button
+                  type="submit"
+                  id="btn-login"
+                  class="btn btn-primary btn-user px-5"
+                >
+                  Iniciar sesión
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-message></app-message>

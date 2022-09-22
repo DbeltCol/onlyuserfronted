@@ -1,0 +1,19 @@
+<div class="container-fluid overflow-hidden m-0 p-0 vh-100">
+  <div class="row overflow-auto m-0">
+    <div class="bg-yellowW360">
+      <app-navbar></app-navbar>
+    </div>
+
+
+ <div class="col-12 col-md-1 px-0 d-flex sticky-top">
+      <app-sidebar></app-sidebar>
+    </div>
+
+    <div class="col d-flex flex-column h-sm-100 bg-light bloquecuerpo">
+      <div class="minusMargin p-4 boxt-cont borderRadius w-95mb container">
+      <router-outlet></router-outlet>
+    </div>
+    </div>
+  </div>
+  <!--fin row vh-100 overflow-auto -->
+</div>

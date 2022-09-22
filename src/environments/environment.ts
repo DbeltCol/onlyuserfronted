@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  title_spanish: 'Solo para ti',
+  title_english: 'Only 4 U',
+  api: 'http://only.local/api/'
 };
 
 /*

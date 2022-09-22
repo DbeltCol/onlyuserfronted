@@ -1,0 +1,79 @@
+.box-redime select, .box-redime input{
+    background-color: #f8f9fc!important;
+  }
+  .box-numer{
+    display: block;
+    font-size: 9px;
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    background: red;
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    border-radius: 50%;
+    padding: 9px 0;
+    text-align: center;
+    line-height: 0;
+    color: #fff;
+
+  }
+  .font24{
+    font-size: 36px;
+    line-height: 1;
+  }
+  .box-img{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    padding: 15px !important;
+  }
+  .tdcto, .puntoPrecio span{
+    color: #C96A2B;
+    font-weight: 700;
+  }
+  .tdescrip{
+    max-height: 40px;
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 13px;
+    margin: 0;
+    line-height: 1;
+    color: #606060;
+  }
+  .puntoPrecio{
+    font-size: 11px;
+    max-height: 20px;
+    overflow: hidden;
+    margin: 2px 0;
+    color: #606060;
+  }
+  .antes{
+    color: #dbd6de;
+    font-weight: 700;
+     text-decoration: line-through;
+  }
+  .productoc h2:hover, .producto:hover p{
+    color: inherit;
+  }
+  .cate.active{
+    background: #f2f2f2!important;
+    color: #C96A2B;
+  }
+  .colorw{
+    color: #8a8a8a;
+    border: 1px solid transparent;
+  }
+  .colorw i{
+    font-size: 20px;
+    margin: 0 10px;
+  }
+  .colorw .iconmens{
+    color: #C96A2B;
+  }
+  .colorw .iconmedals{
+    color: #ffb800;
+  }
+  .colorw:hover{
+    background: #f2f2f2;
+  }

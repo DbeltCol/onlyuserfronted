@@ -1,0 +1,154 @@
+<div class="col d-flex flex-column h-sm-100 bg-light">
+  <div class="minusMargin p-4 boxt-cont borderRadius w-95mb container">
+    <div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide carousel-fade mb-md-5 mb-1"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="assets/img/banner-2.jpg"
+            class="borderRadius d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="assets/img/banner-2.jpg"
+            class="borderRadius d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="assets/img/banner.jpg"
+            class="borderRadius d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row p-2 shadow m-0 mb-4 borderRadius border bg-white">
+      <div class="col-md-5 p-2 order-md-1 order-2 bg-white">
+        <div class="p-3 mb-1 bg-white borderRadius w-100 text-center">
+          <select
+            class="form-select border-0"
+            aria-label="Default select example"
+            (change)="getBenefitByType($event)"
+          >
+            <option selected>Explora por categorías</option>
+            <option
+              value="{{ typeBenefit.id }}"
+              *ngFor="let typeBenefit of typeBenefits"
+            >
+              {{ typeBenefit.name }}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6 p-2 order-md-2 order-3">
+        <div class="p-3 mb-1 w-100 text-center">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control border-0"
+              placeholder="Encuentra tu producto"
+              aria-describedby="basic-addon2"
+              (keyup) = "filter($event)"
+            />
+            <span class="input-group-text border-0" id="basic-addon2">
+              <i class="mdi mdi-magnify"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1 p-2 order-md-3 order-1">
+        <div class="p-3 mb-1 bg-white borderRadius w-100 text-center">
+          <a href="/" class="text-center position-relative">
+            <i class="mdi mdi-cart-outline font24"></i>
+            <span class="box-numer">10</span>
+          </a>
+        </div>
+      </div>
+    </div>
+ <!--    <div
+      class="row justify-content-md-center p-2 shadow m-0 mb-4 borderRadius border bg-white"
+    >
+      <div class="col">
+        <div class="w-100 text-center">
+          <a href="#" class="colorw w-100 p-2 rounded-pill d-block cate active">
+            Todo
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="w-100 text-center">
+          <a href="#" class="colorw w-100 p-2 rounded-pill d-block"> Electro</a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="w-100 text-center">
+          <a href="#" class="colorw w-100 p-2 rounded-pill d-block"
+            >Tecnología</a
+          >
+        </div>
+      </div>
+      <div class="col">
+        <div class="w-100 text-center">
+          <a href="#" class="colorw w-100 p-2 rounded-pill d-block"
+            >Salud y Belleza</a
+          >
+        </div>
+      </div>
+    </div> -->
+
+    <div class="row m-0">
+      <div
+        class="col-md-12 d-flex justify-content-md-center align-items-center"
+        *ngIf="benefits?.length === 0"
+      >
+        Oops! No existen beneficios en esta categoria, puedes probar con otra
+        para encontrar beneficios
+      </div>
+
+      <div
+        class="col-md-3 m-0 p-0 mb-3"
+        style="border: 1px solid transparent"
+        *ngFor="let benefit of benefits"
+      >
+        <a href="\" class="bg-white d-block w-100 border pt-3 producto">
+          <div class="box-img d-flex align-items-center">
+            <img
+              src="{{ benefit.image }}"
+              class="img-fluid"
+              alt="..."
+            />
+          </div>
+          <div class="card-body mb-0">
+            <!--               <h2 class="tdcto small">10% DCTO</h2> -->
+            <p class="tdescrip">{{ benefit.name }}</p>
+            <!--             <p class="puntoPrecio">Desde <span>200</span> puntos + $288.700</p>
+              <p class="puntoPrecio">Solo con puntos <span>31.650</span></p>
+              <p class="antes lh-1">Antes 45.817 puntos</p> -->
+            <a class="btn btn-sm btn-primary" [routerLink]="['/detalle',benefit.code,'beneficio']">Solicitar</a>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-xl-4 col-md-4 mb-4">
+  <div class="card shadow h-100 ">
+      <div class="card-body text-center ">
+          <h2 class="h5 mb-0 font-weight-bold text-gray-800">Nombre Beneficio</h2>
+          <p class="text-xs font-weight-bold  text-gray-600 mb-1">Lorem ipsum dolor sit amet</p>
+          <a href="#" class=" d-sm-inline-block btn btn-sm btn-warning shadow-sm mt-3"> Ir a beneficio</a>
+      </div>
+      <div class="box-img-beneficios w-75 mx-auto" style="">
+          <img src="assets/img/ejemplo3.jpg" class="img-fluid">
+      </div>
+  </div>
+</div>

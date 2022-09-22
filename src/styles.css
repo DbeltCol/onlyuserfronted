@@ -1,1 +1,131 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+.bg-yellowW360{
+    background: rgb(45,17,2);
+    background: linear-gradient(90deg, rgba(45,17,2,1) 0%, rgba(201,106,43,1) 35%, rgba(242,203,12,1) 100%);
+    
+  }
+  .bg-header{
+    background-image: url(./assets/img/elementos.png);
+
+  }
+ 
+
+  .listLat {
+    height: 100vh;
+  }
+  .listLat li {
+    font-size: 25px;
+  }
+  .listLat li a {
+    color: #8793a3;
+  }
+  .bloquecuerpo {
+    overflow: scroll;
+    height: 88vh;
+    padding-top: 50px;
+    overflow-x: hidden;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
+  .btn-outline-primary {
+    color: #c96a2b;
+    border-color: #c96a2b;
+  }
+  .btn-outline-primary:hover {
+    color: #fff;
+    background-color: #c96a2b;
+    border-color: #c96a2b;
+  }
+
+  @media (max-width: 768px) {
+    .listLat {
+      height: auto;
+    }
+  }
+
+
+  .listLat{
+    height: 100vh;
+  }
+  .listLat li{
+    font-size: 25px;
+  }
+  .listLat  li a{
+    color: #8793a3;
+  }
+  .bloquecuerpo{
+    overflow: scroll;
+    height: 88vh;
+    padding-top: 50px;
+    overflow-x: hidden;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: transparent; 
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
+  .btn-outline-primary {
+    color: #C96A2B;
+    border-color: #C96A2B;
+  }
+  .btn-outline-primary:hover {
+    color: #fff;
+    background-color: #C96A2B;
+    border-color: #C96A2B;
+  }
+  .colorw{
+    color: #8a8a8a;
+    border: 1px solid transparent;
+  }
+  .colorw i{
+    font-size: 20px;
+    margin: 0 10px;
+  }
+  .colorw .iconmens{
+    color: #C96A2B;
+  }
+  .colorw .iconmedals{
+    color: #ffb800;
+  }
+  .colorw:hover{
+    background: #f2f2f2;
+  }
+  @media (max-width: 768px){
+    .listLat{
+      height: auto;
+    }
+  }

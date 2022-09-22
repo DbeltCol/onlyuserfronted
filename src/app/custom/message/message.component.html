@@ -1,0 +1,9 @@
+  <div class="message-box bg-error-box" *ngIf="error">
+    <i class="fas fa-times-circle" (click)="removeError()"></i>
+    <p class="message-box-text">{{ message }}</p>
+  </div>
+
+  <div class="message-box bg-success-box" *ngIf="success">
+    <i class="fas fa-times-circle" (click)="removeError()"></i>
+    <p class="message-box-text">{{ message }}</p>
+  </div>

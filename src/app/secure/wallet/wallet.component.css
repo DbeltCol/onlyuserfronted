@@ -1,0 +1,195 @@
+
+.box-general{
+	background: #f3f4f5;
+	padding: 0;
+}
+.bg-greyW360{
+	background: #1f2937;
+}
+.w-90{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.borderRadius{
+	border-radius: 10px;
+}
+.borderRadiusTop{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.boxt-cont{
+	width: 95%;
+	margin: 0 auto;
+}
+.minusMargin{
+	margin-top: -2%;
+}
+.img-user{
+	display: block;
+	width: 35px;
+	height: 35px;
+}
+.nav-link{
+	color: #fff;
+	opacity: .8;
+}
+.cardW{
+	display:block;
+	background: #1f2937;
+	color: #8a8a8a;
+}
+.t-color{
+	color:#212529;
+}
+.cardW i{
+	margin-right: 10px;
+}
+.lineDv{
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+}
+.t-resalt{
+	font-weight: 600;
+	font-size: 1.075rem;
+}
+.pminus{
+	position: relative;
+	top: -5px!important;
+}
+p{
+	font-size: 0.9rem;
+}
+/* ejemplo*/
+.control {
+  position: relative;
+}
+.control .file {
+  display: none;
+  color: white;
+  position: absolute;
+}
+.control .file + label {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Fjalla One", sans-serif;
+  font-size: 12px;
+  color: #8a8a8a;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  vertical-align: text-top;
+  padding-top: 10px;
+  position: absolute;
+  border: 0px solid #660000;
+  transition: 0.2s all;
+}
+.control .file + label:hover {
+  cursor: pointer;
+  color: #cccccc;
+}
+
+.btno-cerrar{
+	position: absolute;
+	right: 25px;
+	background: #858796;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	font-size: 12px;
+	padding-top: 1px;
+}
+.textpubli{
+	color: #f2f2f2;
+}
+.textpubli::placeholder {
+  color: #f2f2f2;
+}
+.textpubli:hover, .textpubli:focus, .textpubli:active {
+	border: none;
+	 outline: none;
+}
+/* chips*/
+.chip{
+    display: inline-flex;
+    flex-direction: row;
+    background-color: #e5e5e5;
+    border: none;
+    cursor: default;
+    height: 36px;
+    outline: none;
+    padding: 0;
+    font-size: 14px;
+    font-color: #333333;
+    font-family:"Open Sans", sans-serif;
+    white-space: nowrap;
+    align-items: center;
+    border-radius: 16px;
+    vertical-align: middle;
+    text-decoration: none;
+    justify-content: center;
+}
+.chip-head{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background-color: #32C5D2;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    align-items: center;
+    user-select: none;
+    border-radius: 50%;
+    justify-content: center;
+    width: 36px;
+    color: #fff;
+    height: 36px;
+    font-size: 20px;
+    margin-right: -4px;
+}
+.chip-content{
+    cursor: inherit;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    white-space: nowrap;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.chip-close i:hover{
+    color: #666666;
+}
+
+
+/**/
+/* this is needed to make the content scrollable on larger screens */
+@media (min-width: 576px) {
+    .h-sm-100 {
+        height: 100%;
+    }
+}
+/* fin  */
+
+
+@media (max-width: 768px){
+.boxt-cont{
+	width: 100%;
+}
+.minusMargin{
+	margin-top: -5%;
+}
+.w-95mb{
+	width: 95%;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+}
+@media (min-width: 992px) and (max-width: 1199px){
+
+}

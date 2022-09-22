@@ -1,0 +1,79 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="modalRecognition"
+  tabindex="-1"
+  aria-labelledby="modalRecognition"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-greyW360 pt-4">
+      <div class="d-flex position-relative rounded-top bg-greyW360 p-2">
+        <h5 class="mx-auto" id="modalRecognition">
+          <span>
+            <i class="fa-solid fa-star"></i> </span
+          >Nuevo Reconocimiento
+        </h5>
+        <div class="btno-cerrar rounded-circle">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+      <div class="modal-body bg-white">
+        <form [formGroup]="formRecognition" (submit)="saveData()">
+          <h4 class="text-center mb-3">Escoge tu tipo de reconocimiento</h4>
+        <div class="row">
+          <div class="col-md text-center mb-3">
+            <button class="btn-primary btn btn-sm px-3" type="button" (click)="getTypeRecognition($event)" value="Personal">
+              <i class="mdi mdi-account-outline me-2"></i>
+              Personal
+            </button>
+          </div>
+          <div class="col-md text-center mb-3">
+            <button class="btn-primary btn btn-sm px-3" type="button" (click)="getTypeRecognition($event)" value="Equipo">
+              <i class="mdi mdi-account-multiple-plus-outline me-2"></i>
+              Equipo
+            </button>
+          </div>
+        </div>
+        <select class="form-select my-2" aria-label="Default select example" id="assign_recognition" (change)="giveActorRecognization($event)" >
+          <option selected>--Selecciona--</option>
+          <option value="{{ actor.id }}" *ngFor="let actor of actors">{{ actor.name ? actor.name : actor.name_completed }}</option>
+   
+        </select>
+        <hr />
+    
+        <div class="chip" *ngFor="let recognition of recognitions">
+          <div class="chip-head">{{ recognition.name ? recognition.name.charAt(0) : recognition.name_completed.charAt(0) }}</div>
+          <div class="chip-content">{{ recognition.name ? recognition.name : recognition.name_completed }}</div>
+          <div class="chip-close" (click)="deleteSelected($event)">
+            <i class="mdi mdi-close-circle me-2"></i>
+          </div>
+        </div>
+        <hr />
+        <select class="form-select my-2" aria-label="Default select example" formControlName="motivo">
+          <option selected>--Motivo--</option>
+          <option value="1">Cumplimiento</option>
+          <option value="2">Meritos</option>
+          <option value="3">Cumpleaños</option>
+        </select>
+        <div class="d-grid gap-2 p-3">
+          <button
+            class="btn btn-outline-primary"
+            type="submit"
+            data-bs-toggle="modal"
+            data-bs-target="#modalRecognition"
+            
+          >
+            Publicar
+          </button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

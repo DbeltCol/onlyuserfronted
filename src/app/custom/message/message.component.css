@@ -1,0 +1,115 @@
+:root{
+    --danger:rgba(255, 0, 0, 0.322);
+    --success:rgb(19, 204, 19);
+}
+
+.bg-error-box{
+    background-color: var(--danger);
+}
+
+.bg-success-box{
+    background-color: var(--success);
+}
+
+.message-box
+{
+
+    width: 20%;
+    max-height: 150px;
+    border-radius: 5px;
+    position: absolute;
+    right: 10px;
+    top: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding:10px;
+}
+
+.message-box-text{
+ 
+    overflow: auto;
+    max-height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-box-text::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 0;    /* Tamaño del scroll en horizontal */
+
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.message-box-text::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.message-box-text::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.message-box-text::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+.message-box-text::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+.message-box-text::-webkit-scrollbar-track:hover,
+.message-box-text::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+.message-box i{
+    color:white;
+    position: absolute;
+    right: 10px;
+    top:-5px;
+    z-index: 999999999999999;
+    font-size: 20px;
+    cursor: pointer;
+}
+.message-box-text{
+    overflow-x: scroll;
+}
+
+
+
+
+@media (max-width: 768px){
+    .message-box{
+        width: 100%;
+        margin: 0;
+        right: 0;
+      
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .message-box{
+        width: 70%;
+        margin: 0;
+        right: 0;
+    }
+
+}
+@media (min-width: 992px) and (max-width: 1199px){
+    .message-box{
+        width: 60%;
+        margin: 0;
+        right: 0;
+    }
+}
